@@ -1,0 +1,21 @@
+@mixin text-rows($rows) {
+  /* stylelint-disable */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $rows;
+  -webkit-box-orient: vertical; 
+  /* stylelint-enable */
+}
+
+@mixin rmax($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width + "px") {
+    @content;
+  }
+}
