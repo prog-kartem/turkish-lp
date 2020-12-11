@@ -1,0 +1,49 @@
+.benefits {
+  padding-top: 156px;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include rmax($sm) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    margin-bottom: 56px;
+    padding: 0 10px;
+    max-width: 190px;
+  }
+
+  &__icon {
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    font-family: "Montserrat";
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__text-b {
+    font-weight: 800;
+  }
+
+  @include rmax($md) {
+    padding-top: 96px;
+  }
+
+  @include rmax($sm) {
+    padding-top: 72px;
+  }
+}

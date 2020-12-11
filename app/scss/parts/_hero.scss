@@ -1,5 +1,5 @@
 .hero {
-  height: 768px;
+  min-height: 768px;
   font-family: "Montserrat";
   background-color: $dark-blue;
 
@@ -72,6 +72,6 @@
   }
 
   @include rmax($sm) {
-    height: 590px;
+    min-height: 590px;
   }
 }
