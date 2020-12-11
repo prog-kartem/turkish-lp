@@ -40,6 +40,67 @@ p {
   max-width: 1200px;
 }
 
+.title {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 1.3;
+  color: $dark;
+
+  &--big {
+    font-size: 4.8rem;
+
+    @include rmax($sm) {
+      font-size: 2.9rem;
+    }
+  }
+}
+
+.text {
+  font-family: "Lato";
+  line-height: 1.5;
+
+  @include rmax($sm) {
+    font-size: 1.4rem;
+  }
+}
+
+.btn {
+  outline: transparent;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 40px;
+  min-width: 370px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: $white;
+  background-color: $red;
+  transition: box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba($red, 0.5);
+  }
+
+  &:hover {
+    background-color: #c44943;
+  }
+
+  &:active {
+    background-color: #a73e39;
+  }
+
+  &--sm {
+    min-width: 270px;
+  }
+
+  @include rmax($sm) {
+    min-width: 290px;
+    font-size: 1.3rem;
+  }
+}
+
 .visually-hidden {
   /* stylelint-disable */
   position: absolute !important;
@@ -70,4 +131,8 @@ p {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.shadow {
+  box-shadow: 0 10px 24px rgba($shadow, 0.12);
 }
