@@ -74,6 +74,12 @@ p {
 
   &--sm {
     font-size: 3.2rem;
+
+    @include rmax($sm) {
+      /* stylelint-disable */
+      font-size: 2.5rem !important;
+      /* stylelint-enable */
+    }
   }
 
   &--center {
@@ -155,8 +161,9 @@ p {
     outline: transparent;
     border: none;
     border-radius: 50%;
-    width: 56px;
+    width: 100%;
     height: 56px;
+    max-width: 56px;
     background-image: url("../images/slider-btn-arrow.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -176,9 +183,29 @@ p {
       background-color: $dark-purple;
     }
 
+    &:first-child {
+      @include rmax($sm) {
+        order: -2;
+        margin-right: 75px;
+      }
+    }
+
     &:last-child {
       transform: rotate(180deg);
+
+      @include rmax($sm) {
+        order: -1;
+        margin-left: 75px;
+      }
     }
+
+    @include rmax($sm) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include rmax($sm) {
+    flex-wrap: wrap;
   }
 }
 
