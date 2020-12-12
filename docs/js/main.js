@@ -27,7 +27,7 @@ let skillsSlider = new Swiper('.skills__slider', {
 const btnsInfo = document.querySelectorAll('.btn');
 const modalOverlay = document.querySelector('.modals__overlay');
 const modals = document.querySelectorAll('.modals__modal');
-const modalClose = document.querySelector('.modals__close');
+const modalClose = document.querySelectorAll('.modals__close');
 
 btnsInfo.forEach((el) => {
   el.addEventListener('click', (e) => {
@@ -45,11 +45,21 @@ btnsInfo.forEach((el) => {
 
 modalOverlay.addEventListener('click', (e) => {
   console.log(e.target);
-  if (e.target == modalOverlay || e.target == modalClose) {
+  if (e.target == modalOverlay) {
     modalOverlay.classList.remove('modals__overlay--visible');
     document.querySelector('body').style.overflow = 'visible';
     modals.forEach((el) => {
       el.classList.remove('modals__modal--visible');
     });
   }
+});
+
+modalClose.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    modalOverlay.classList.remove('modals__overlay--visible');
+    document.querySelector('body').style.overflow = 'visible';
+    modals.forEach((el) => {
+      el.classList.remove('modals__modal--visible');
+    });
+  });
 });
