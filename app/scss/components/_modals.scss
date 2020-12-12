@@ -27,13 +27,12 @@
     align-items: center;
     justify-content: center;
     margin: 0 15px;
-    min-height: 505px;
-    max-width: 570px;
+    border-radius: 20px;
     background-color: #fff;
     transition: transform 0.3s;
 
     &--visible {
-      display: block;
+      display: flex;
     }
   }
 
@@ -52,8 +51,11 @@
 }
 
 .modal-info {
-  border-radius: 20px;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 52px;
+  min-height: 505px;
+  max-width: 570px;
 
   &__lvl {
     display: flex;
@@ -118,5 +120,119 @@
 
   @include rmax($sm) {
     padding: 24px;
+  }
+}
+
+.modal-order {
+  align-items: flex-start;
+  width: 100%;
+  max-width: 770px;
+
+  &__image {
+    flex-shrink: 0;
+    border-radius: 20px 0 0 20px;
+    width: 100%;
+    min-height: 577px;
+    max-width: 348px;
+
+    @include rmax($lg) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    flex-shrink: 0;
+    padding: 52px 70px 52px 52px;
+
+    @include rmax($lg) {
+      padding: 52px;
+    }
+
+    @include rmax($sm) {
+      padding: 52px 24px 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    color: $dark-blue;
+
+    @include rmax($sm) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    max-width: 300px;
+    font-size: 1.2rem;
+
+    @include rmax($sm) {
+      max-width: 290px;
+      text-align: center;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: $dark;
+
+    @include rmax($sm) {
+      text-align: center;
+    }
+  }
+
+  &__input {
+    margin-bottom: 16px;
+    outline: transparent;
+    border: 1px solid rgba($dark, 0.1);
+    border-radius: 40px;
+    padding: 16px 20px;
+    width: 100%;
+    font-size: 1.4rem;
+    transition: border-color 0.3s;
+
+    &::placeholder {
+      color: rgba($dark, 0.3);
+    }
+
+    &:focus {
+      border: 1px solid rgba($dark, 0.9);
+    }
+
+    &:hover {
+      border: 1px solid rgba($dark, 0.5);
+    }
+
+    &:active {
+      box-shadow: inset 0 0 30px 1px rgba($dark, 0.3)
+    }
+
+    @include rmax($sm) {
+      display: block;
+      margin: 0 auto 16px;
+      max-width: 290px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-top: 16px;
+    min-width: 300px;
+
+    @include rmax($sm) {
+      display: block;
+      margin: 0 auto 16px;
+      min-width: 290px;
+    }
+  }
+
+  @include rmax($lg) {
+    max-width: 500px;
   }
 }
