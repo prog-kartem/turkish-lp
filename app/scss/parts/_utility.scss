@@ -77,4 +77,8 @@
       }
     }
   }
+
+  @include rmax($sm) {
+    padding-bottom: 60px;
+  }
 }

@@ -1,0 +1,91 @@
+.advantages {
+  padding: 120px 0 80px;
+  background-color: rgba($light-purple, 0.2);
+
+  &__inner {
+    align-items: center;
+    margin-bottom: 60px;
+
+    @include rmax($lg) {
+      flex-wrap: wrap;
+    }
+
+    @include rmax($sm) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__flag {
+    margin-right: 120px;
+
+    @include rmax($xl) {
+      width: 363px;
+      height: 683px;
+    }
+
+    @include rmax($lg) {
+      margin: 0 auto 120px;
+    }
+
+    @include rmax($sm) {
+      margin-bottom: 80px;
+      width: 226px;
+      height: 425px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 48px;
+
+    @include rmax($sm) {
+      text-align: center;
+
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__caption {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 2rem;
+
+    &::before {
+      content: "";
+      margin-right: 20px;
+      width: 100%;
+      max-width: 24px;
+      height: 24px;
+      background-image: url("../images/check.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__text {
+    padding-left: 44px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @include rmax($lg) {
+    padding: 72px 0 48px;
+  }
+
+  @include rmax($sm) {
+    padding: 60px 0 40px;
+  }
+}
