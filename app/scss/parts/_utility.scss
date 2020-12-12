@@ -1,0 +1,59 @@
+.utility {
+  &__container {
+    // padding: 0;
+  }
+
+  &__title {
+    margin: 0 auto 52px;
+    max-width: 970px;
+  }
+
+  &__slider {
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slide {
+    position: relative;
+    flex-shrink: 0;
+    margin-bottom: 32px;
+    border-radius: 10px;
+    padding: 32px 32px 56px;
+    width: 100%;
+    min-height: 430px;
+    max-width: 370px;
+
+    &::after {
+      counter-increment: heading 1;
+      content: counter(heading);
+      position: absolute;
+      right: 32px;
+      bottom: 21px;
+      font-family: "Montserrat";
+      font-weight: 800;
+      font-size: 19rem;
+      color: rgba($light-purple, 0.4);
+    }
+  }
+
+  &__caption {
+    margin-bottom: 24px;
+    min-height: 78px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: $dark;
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
