@@ -50,7 +50,7 @@ gulp.task("style", function () {
 });
 
 gulp.task("html", function () {
-  return gulp.src(['app/*.html', '!app/parts/**/*.html'])
+  return gulp.src(['app/*.html', '!app/html/**/*.html'])
     .pipe(fileInclude({
       prefix: "@@",
       basepath: '@file'
