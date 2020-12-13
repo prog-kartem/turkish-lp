@@ -1,14 +1,17 @@
 .benefits {
-  padding-top: 156px;
-  padding-bottom: 32px;
+  padding: 175px 0 60px;
+
+  .container {
+    max-width: 1250px;
+  }
 
   &__title {
-    margin-bottom: 32px;
+    margin: 0 0 32px 25px;
   }
 
   &__list {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 
     @include rmax($sm) {
       justify-content: center;
@@ -16,7 +19,7 @@
   }
 
   &__item {
-    margin-bottom: 56px;
+    margin: 0 5px 32px;
     padding: 0 10px;
     max-width: 190px;
   }

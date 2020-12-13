@@ -43,7 +43,6 @@ let teachersSlider = new Swiper('.teachers__slider', {
   slideActiveClass: 'teachers__slide--active',
   slidePrevClass: 'teachers__slide--prev',
   slideNextClass: 'teachers__slide--next',
-  spaceBetween: 30,
   slidesPerView: '1',
   loop: true,
   centeredSlides: true,

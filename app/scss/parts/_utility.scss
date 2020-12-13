@@ -8,7 +8,7 @@
   }
 
   &__wrapper {
-    margin-bottom: 30px;
+    margin-bottom: 27px;
     width: 100%;
     height: 100%;
   }
@@ -48,7 +48,6 @@
     font-weight: 800;
     font-size: 2rem;
     line-height: 1.3;
-    color: $dark;
 
     @include rmax($sm) {
       margin-bottom: 16px;
@@ -67,6 +66,7 @@
   }
 
   &__btns {
+    align-items: center;
     margin: 0 auto;
   }
 
