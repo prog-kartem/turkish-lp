@@ -63,6 +63,7 @@
     width: 120px;
     height: 120px;
     background-size: cover;
+    background-repeat: no-repeat;
 
     &::before {
       content: "";
@@ -88,6 +89,8 @@
   }
 
   &__text {
+    @include text-rows(5);
+
     display: none;
     margin: 0 auto;
     max-width: 770px;

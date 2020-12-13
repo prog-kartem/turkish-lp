@@ -122,7 +122,7 @@
 }
 
 .modal-order {
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
   max-width: 770px;
 
@@ -132,6 +132,7 @@
     width: 100%;
     min-height: 577px;
     max-width: 348px;
+    background-size: cover;
 
     @include rmax($lg) {
       display: none;
@@ -161,6 +162,8 @@
   }
 
   &__text {
+    @include text-rows(8);
+
     margin-bottom: 40px;
     max-width: 300px;
     font-size: 1.2rem;

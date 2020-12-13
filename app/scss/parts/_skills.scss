@@ -80,6 +80,8 @@
   }
 
   &__text {
+    @include text-rows(10);
+
     margin-bottom: 20px;
     font-family: "Lato";
   }

@@ -17,6 +17,9 @@
 
   &__flag {
     margin-right: 130px;
+    height: 884px;
+    max-width: 470px;
+    object-fit: cover;
 
     @include rmax($xl) {
       width: 363px;
