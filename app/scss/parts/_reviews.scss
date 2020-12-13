@@ -1,0 +1,70 @@
+.reviews {
+  padding: 120px 0 60px;
+
+  &__slider {
+    overflow: hidden;
+    margin-bottom: 60px;
+    width: 100%;
+
+    .swiper-pagination-bullet {
+      width: 18px;
+      height: 18px;
+      box-shadow: inset 0 0 0 2px $dark-purple;
+      background-color: transparent;
+
+      &-active {
+        box-shadow: none;
+        background-color: $dark-blue;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    margin-bottom: 80px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    margin: 0 auto 60px;
+    max-width: 680px;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+  }
+
+  &__img {
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+  }
+
+  &__name {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.3;
+    color: $dark;
+  }
+
+  &__pagination {
+    text-align: center;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @include rmax($sm) {
+    padding: 60px 0;
+  }
+}

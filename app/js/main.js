@@ -24,6 +24,19 @@ let skillsSlider = new Swiper('.skills__slider', {
   },
 });
 
+let reviewsSlider = new Swiper('.reviews__slider', {
+  wrapperClass: 'reviews__wrapper',
+  slideClass: 'reviews__slide',
+  spaceBetween: 60,
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  loop: true,
+  pagination: {
+    el: '.reviews__pagination',
+    clickable: true,
+  },
+});
+
 const btnsInfo = document.querySelectorAll('.btn');
 const modalOverlay = document.querySelector('.modals__overlay');
 const modals = document.querySelectorAll('.modals__modal');
