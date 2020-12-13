@@ -44,7 +44,6 @@ btnsInfo.forEach((el) => {
 });
 
 modalOverlay.addEventListener('click', (e) => {
-  console.log(e.target);
   if (e.target == modalOverlay) {
     modalOverlay.classList.remove('modals__overlay--visible');
     document.querySelector('body').style.overflow = 'visible';
@@ -61,5 +60,36 @@ modalClose.forEach((el) => {
     modals.forEach((el) => {
       el.classList.remove('modals__modal--visible');
     });
+  });
+});
+
+const price = Number(document.querySelector('.cost__price').getAttribute('data-price-task'));
+const costTabs = document.querySelectorAll('.cost__btn');
+
+costTabs.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    costTabs.forEach((el) => {
+      el.classList.remove('cost__btn--active');
+    });
+    el.classList.add('cost__btn--active');
+    let priceTask = document.querySelector('.cost__price--price-task');
+    let allTask = document.querySelector('.cost__price--all-tasks');
+    let allPrice = document.querySelector('.cost__price--all-price');
+    let taskCount = e.currentTarget.getAttribute('data-task-count');
+
+    priceTask.innerHTML = price;
+    allTask.innerHTML = taskCount;
+    allPrice.innerHTML = 0;
+
+    let maxNum = taskCount * price;
+    num = 0;
+    let t = Math.round(500 / (maxNum / price));
+    let interval = setInterval(() => {
+      num = num + price;
+      if (num >= maxNum) {
+        clearInterval(interval)
+      }
+      allPrice.innerHTML = num;
+    }, t);
   });
 });

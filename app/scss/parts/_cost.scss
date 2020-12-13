@@ -1,0 +1,107 @@
+.cost {
+  &__title {
+    margin-bottom: 52px;
+
+    @include rmax($sm) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__choose {
+    display: block;
+    margin-bottom: 32px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    text-align: center;
+    color: $dark;
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    @include rmax($sm) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    margin: 0 15px 32px;
+    outline: transparent;
+    border: 1px solid rgba($dark, 0.5);
+    border-radius: 40px;
+    padding: 16px 24px;
+    width: 100%;
+    max-width: 200px;
+    font-size: 1.4rem;
+    color: $dark;
+    background-color: transparent;
+    transition: border-color 0.3s;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      margin-right: 12px;
+      border: 1px solid rgba($dark, 0.3);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 4px rgba($green, 0.5);
+    }
+
+    &:hover {
+      border-color: $green;
+    }
+
+    &--active {
+      &::before {
+        background-color: rgba($green, 0.4);
+      }
+    }
+
+    @include rmax($sm) {
+      margin: 0 15px 16px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 60px;
+
+    @include rmax($sm) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 16px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    color: $dark;
+  }
+
+  &__price {
+    color: $dark-blue;
+  }
+
+  &__order {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 10px;
+    font-size: 1.4rem;
+  }
+
+  @include rmax($sm) {
+    padding: 60px 0;
+  }
+}
