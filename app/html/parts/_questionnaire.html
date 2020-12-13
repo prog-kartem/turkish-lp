@@ -1,0 +1,97 @@
+<section class="questionnaire">
+  <div class="container">
+    <h2 class="questionnaire__title title title--center title--sm">Анкета участника вебинара:</h2>
+    <p class="questionnaire__text text">
+      Заполните анкету. Она позволит нам понять, какие участники будут на вебинаре и о чём нужно говорить в первую
+      очередь. Анкета анонимная. Давайте, пожалуйста, правдивые ответы. Так мы сделаем вебинар максимально полезным
+      именно для Вас.
+    </p>
+    <span class="questionnaire__text questionnaire__text--bold">Это займет меньше 1 (одной) минуты!</span>
+    <form class="questionnaire__form" action="#">
+      <ul class="questionnaire__list list-reset">
+        <li class="questionnaire__item">
+          <label>
+            <span class="questionnaire__caption">Ваше имя:</span>
+            <input class="questionnaire__input" type="text" name="q-name" placeholder="Имя">
+          </label>
+        </li>
+        <li class="questionnaire__item">
+          <span class="questionnaire__caption">Сколько вам лет?</span>
+          <ul class="questionnaire__radio-list list-reset">
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r1" checked id="year17" type="radio" value='17'>
+              <label class="questionnaire__label" for="year17">меньше 18 лет</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r1" id="year18" type="radio" value='18'>
+              <label class="questionnaire__label" for="year18">18 - 25 лет</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r1" id="year26" type="radio" value='26'>
+              <label class="questionnaire__label" for="year26">26 - 45 лет</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r1" id="year45" type="radio" value='45'>
+              <label class="questionnaire__label" for="year45">45 - 60 лет</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r1" id="year60" type="radio" value='60'>
+              <label class="questionnaire__label" for="year60">60+ лет</label>
+            </li>
+          </ul>
+        </li>
+        <li class="questionnaire__item">
+          <span class="questionnaire__caption">Какая у вас цель занятий?</span>
+          <textarea class="questionnaire__area" placeholder="Опишите своими словами"></textarea>
+        </li>
+        <li class="questionnaire__item">
+          <span class="questionnaire__caption">Какой у вас уровень владения турецким?</span>
+          <ul class="questionnaire__radio-list list-reset">
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r2" checked id="lvl-0" type="radio" value='lvl-0'>
+              <label class="questionnaire__label" for="lvl-0">нулевой (вообще ничего не знаю)</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r2" id="lvl-1" type="radio" value='lvl-1'>
+              <label class="questionnaire__label" for="lvl-1">что-то знаю</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r2" id="lvl-2" type="radio" value='lvl-2'>
+              <label class="questionnaire__label" for="lvl-2">начальный (А1)</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r2" id="lvl-3" type="radio" value='lvl-3'>
+              <label class="questionnaire__label" for="lvl-3">базовый (А2)</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r2" id="lvl-4" type="radio" value='lvl-4'>
+              <label class="questionnaire__label" for="lvl-4">средний (В1-В2)</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r2" id="lvl-5" type="radio" value='lvl-5'>
+              <label class="questionnaire__label" for="lvl-5">продвинутый (С1)</label>
+            </li>
+          </ul>
+        </li>
+        <li class="questionnaire__item">
+          <span class="questionnaire__caption">Как быстро вы хотите прокачать турецкий для вашей цели?</span>
+          <ul class="questionnaire__radio-list list-reset">
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r3" checked id="m-2" type="radio" value='m-2'>
+              <label class="questionnaire__label" for="m-2">2-3 месяца</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r3" id="m-3" type="radio" value='m-3'>
+              <label class="questionnaire__label" for="m-3">3-6 месяцев</label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <input class="questionnaire__radio" name="r3" id="m-6" type="radio" value='m-6'>
+              <label class="questionnaire__label" for="m-6">6-12 месяцев</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <button class="questionnaire__btn btn btn--sm" type="submit">Заполнить анкету</button>
+    </form>
+  </div>
+</section>
