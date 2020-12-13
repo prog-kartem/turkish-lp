@@ -1,0 +1,117 @@
+.teachers {
+  padding: 60px 0;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__slider {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slide {
+    position: relative;
+    flex-shrink: 0;
+    text-align: center;
+
+    &--active {
+      .teachers__photo {
+        z-index: 3;
+        width: 200px;
+        height: 200px;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      .teachers__name,
+      .teachers__text {
+        display: block;
+      }
+    }
+
+    &--prev {
+      transform: translateX(915px) translateY(45px);
+      @include rmax($lg) {
+        transform: none;
+      }
+    }
+
+    &--next {
+      transform: translateX(-915px) translateY(45px);
+      @include rmax($lg) {
+        transform: none;
+      }
+    }
+  }
+
+  &__photo {
+    position: relative;
+    margin: 0 auto 40px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($white, 0.7);
+    }
+  }
+
+  &__name {
+    display: none;
+    margin-bottom: 20px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 2.8rem;
+
+    @include rmax($sm) {
+      font-size: 2rem;
+    }
+  }
+
+  &__text {
+    display: none;
+    margin: 0 auto;
+    max-width: 770px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-335px);
+  }
+
+  &__btn {
+    outline: transparent;
+    border: none;
+    width: 13px;
+    height: 21px;
+    background-image: url("../images/teacher-btn.svg");
+    background-color: transparent;
+    cursor: pointer;
+
+    &:last-child {
+      right: 0;
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -37,6 +37,23 @@ let reviewsSlider = new Swiper('.reviews__slider', {
   },
 });
 
+let teachersSlider = new Swiper('.teachers__slider', {
+  wrapperClass: 'teachers__wrapper',
+  slideClass: 'teachers__slide',
+  slideActiveClass: 'teachers__slide--active',
+  slidePrevClass: 'teachers__slide--prev',
+  slideNextClass: 'teachers__slide--next',
+  spaceBetween: 30,
+  slidesPerView: '1',
+  loop: true,
+  centeredSlides: true,
+  speed: 0,
+  navigation: {
+    nextEl: '.teachers__btn:last-child',
+    prevEl: '.teachers__btn:first-child',
+  },
+});
+
 const btnsInfo = document.querySelectorAll('.btn');
 const modalOverlay = document.querySelector('.modals__overlay');
 const modals = document.querySelectorAll('.modals__modal');
