@@ -61,11 +61,9 @@ const modalClose = document.querySelectorAll('.modals__close');
 btnsInfo.forEach((el) => {
   el.addEventListener('click', (e) => {
     let path = e.currentTarget.getAttribute('data-path');
-
     modals.forEach((el) => {
       el.classList.remove('modals__modal--visible');
     });
-
     document.querySelector(`[data-target="${path}"]`).classList.add('modals__modal--visible');
     document.querySelector('body').style.overflow = 'hidden';
     modalOverlay.classList.add('modals__overlay--visible');
@@ -92,9 +90,8 @@ modalClose.forEach((el) => {
   });
 });
 
-const price = Number(document.querySelector('.cost__price').getAttribute('data-price-task'));
+const price = +document.querySelector('.cost__price').getAttribute('data-price-task');
 const costTabs = document.querySelectorAll('.cost__btn');
-
 costTabs.forEach((el) => {
   el.addEventListener('click', (e) => {
     costTabs.forEach((el) => {
@@ -105,11 +102,9 @@ costTabs.forEach((el) => {
     let allTask = document.querySelector('.cost__price--all-tasks');
     let allPrice = document.querySelector('.cost__price--all-price');
     let taskCount = e.currentTarget.getAttribute('data-task-count');
-
     priceTask.innerHTML = price;
     allTask.innerHTML = taskCount;
     allPrice.innerHTML = 0;
-
     let maxNum = taskCount * price;
     num = 0;
     let t = Math.round(500 / (maxNum / price));
@@ -122,3 +117,14 @@ costTabs.forEach((el) => {
     }, t);
   });
 });
+
+
+const wow = new WOW({
+  boxClass: 'wow',
+  animateClass: 'animated',
+  offset: 0,
+  mobile: false,
+  live: true
+})
+
+wow.init();

@@ -60,7 +60,7 @@
     display: flex;
     align-items: flex-end;
     margin-bottom: 28px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-weight: 800;
     font-size: 2rem;
     color: $dark-blue;
@@ -109,7 +109,7 @@
 
   &__text {
     max-width: 466px;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -178,7 +178,7 @@
     display: block;
     margin-bottom: 8px;
     width: 100%;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 1.4rem;
 

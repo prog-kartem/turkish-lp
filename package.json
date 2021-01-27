@@ -9,6 +9,7 @@
   "author": "Artem Kukharchuk",
   "license": "ISC",
   "devDependencies": {
+    "animate.css": "^4.1.1",
     "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -23,6 +24,8 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
-    "swiper": "^6.2.0"
-  }
+    "swiper": "^6.2.0",
+    "wow.js": "^1.2.2"
+  },
+  "dependencies": {}
 }

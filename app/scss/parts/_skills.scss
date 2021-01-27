@@ -51,7 +51,7 @@
     width: 100%;
     min-height: 464px;
     max-width: 370px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     background-color: $white;
   }
 
@@ -83,7 +83,7 @@
     @include text-rows(10);
 
     margin-bottom: 20px;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
   }
 
   &__btn {
